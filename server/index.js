@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS order_items (
 )`);
 
 const app=express();
+app.set('trust proxy', 1);
 app.disable('x-powered-by');
 app.use(helmet());
 app.use(cors({origin:FRONTEND_URL,credentials:false}));
